@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    
+    <script>
+    /*  const product2 = {
+        name: 'shirt',
+      }
+      console.log(product2);
+      console.log(product2['name-age']);*/
+
+
+    //   objects are references
+            const object1 = {
+                message: 'hello'
+            };
+
+            const object2 = object1;
+
+            object1.message = 'Good Job'
+            console.log(object1)
+
+            const object3 = {
+                            message: 'Hello',
+                            price: 700
+                        }
+
+            //    const message = object3.message;
+               const {message, price}  = object3;
+               console.log(message, price)
+
+
+
+            const object4 = {
+                // message: message
+                message,
+                // method: function function1(){
+                //     console.log('method1')
+
+                // }
+
+                // Shortcut
+                method(){
+                    console.log('method1')
+                }
+            };
+            
+            console.log(object4)
+            object4.method();
+
+            let product = {
+                    name:'Basketball',
+                    price: 2095,
+                    ['delivery-time']: '3days',
+                    }
+                    
+                product.price +500
+
+            let product2 = {
+                name: 'Ball',
+                price: 2000,
+            }
+
+            function comparePrice(){
+                if(product)
+
+            }
+
+                    console.log(product);
+
+
+    </script>
+</body>
+</html>

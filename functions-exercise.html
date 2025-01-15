@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions html</title>
+</head>
+<body>
+    
+
+    <script>
+     /* function greet(name){
+        console.log('call')
+        console.log('mine')
+        
+        if(!name){
+            console.log('Hi there')
+
+        }
+
+
+      }
+      greet();
+
+
+      function celciusToFahrenheit(celsius){
+                return celsius * 9/5  +32
+      }
+      celciusToFahrenheit(25)
+
+      function fahrenheitToCelcius(fahrenheit){
+        return (fahrenheit -32) * 5/9
+      }
+
+
+     
+      
+      function convertTemperature(degrees, unit){
+
+        alert(degrees * 9/5  +32 + unit)
+
+        alert((degrees -32) * 5/9 + unit)
+
+      }
+      convertTemperature(25, 'c')
+      convertTemperature(86, 'f')
+
+
+      function convertTemperature(degrees, unit){
+        let result;
+         if (unit === 'c'){
+            result = celciusToFahrenheit(degrees);
+
+         }
+         else if(unit === 'f'){
+            result = fahrenheitToCelcius(degrees);
+
+         }
+         alert(`The temperature is ${result} ${unit}`);
+        
+
+
+
+
+
+            
+           
+
+      }
+      
+
+      convertTemperature(25, 'c')
+      convertTemperature(86, 'f')*/
+
+
+
+
+
+      function convertLegnth(legnth, from, to){
+
+        let result;
+        if(from ==='miles' && to === 'km'){
+
+            result = legnth * 1.6
+
+        }
+        else if(from ==='km' && to === 'miles'){
+
+            result = legnth/1.6
+
+        }
+        else if(from ==="km" && to ==="km"){
+            result = legnth *1
+        }
+    else if (from ==="miles" && to ==="ft"){
+        result = legnth *5280
+
+
+    }
+    else if(from ==="km" && to ==="ft"){
+        result = legnth * 3281
+
+    }
+
+    else{
+        result = console.log(`Invalid unit ${to}`);
+    }
+        console.log(`Distance is ${result} ${to}`)
+
+      }
+
+      convertLegnth(50, 'miles', 'km');
+      convertLegnth(5, 'miles', 'km');
+      convertLegnth(32, 'km', 'miles');
+      convertLegnth(50, 'km', 'km');
+      convertLegnth(5, 'miles', 'ft');
+      convertLegnth(5, 'km', 'ft');
+      convertLegnth(5, 'lbs', 'lbs');
+
+
+
+    </script>
+</body>
+</html>
