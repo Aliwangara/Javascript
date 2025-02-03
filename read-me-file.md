@@ -1,0 +1,405 @@
+//TABLE OF CONTENTS
+
+    Projects
+    Variables
+    Booleans and If statements
+
+    Comparison Operators
+
+End Table Of Contents//
+
+
+
+//methods
+
+        .toUPPERCASE- Converts strings to uppercase
+           lowercase-                   to lowercase
+        .legnth - finds length of the string.
+        .substring- takes where you want your string to start and end eg let s = Hello world 
+                                                                         console.log(s.substring(0,5)) = Hello
+        .split - Splits a string into an array eg const name = start,  stop,  finish,  today(after the comma there has to be a space )
+                                                  name.split(, )-after the comma there has to be a space = [start, stop ,finish etc] or 1"Start"
+                                                                 2"Stop" etc
+
+        
+
+
+
+//Numbers and math
+        Math.round()-Used to round off Numbers eg math.round(2.8) = 3
+        Math.ceil()- used to round off and get the largest nearest number eg Math.ceil(2.2) = 3
+        Math.floor()-used to round off number to the nearest low integer eg Math.floor(2.7) = 2
+        Math.random()- gives a random number from 0-1.
+
+
+
+//
+//variables start
+
+1.Variable are first given the special words before the name like let eg:let Ali = 20 (Ali is the variable name)
+2.You cant use special word to name a variable although we can use $ and _ eg let let = 2,but you can use let let1 = 2.
+3. we use ;-semi colon to symbolize end of an instruction eg let greetings = 'Hello';.
+4. Reassigning a value to a variable eg let variable1 = 20; 
+                                    To reassign you wont need to use let again you can just reassign eg variable1 = 25 on the console it will display the first and the reassigned variable.
+
+5.Typeof- is used to tell us the data type, type of variable and e.t.c
+
+PRACTICES FOR NAMING VARIABLES
+
+  1.We use camel case for naming, the first word starts with small letter while the second word starts with
+                Capital letter eg:cartQuantity.  
+  2.When naming variables pick a name that is not too short or too long eg C(Too short) or Quantity of products
+                in the cart(Too long)
+
+Ways to Create Variables in Js 
+   1.Let-Created A variable which its value can be reassigned later eg let variable1 = 2
+                                                                           variable1 = 3(Has been reassigned)
+
+
+   2.Const-creates a variable whose value cant be reassignd later eg const variable1 = 2
+                                                                            variable1=3(You will get an error or the varible wont be accepted)
+                                                                
+
+
+
+   3.Var- Creates a variable that can be changed however it has some issues
+
+
+Global Variables- are variables that can be used anywhere in the code.
+                  Are placed outside the scope
+
+
+
+//Variables End
+
+//Booleans and If statements start
+
+Boolean values are true or false
+    Rules of boolean.
+      1. Dont surround boolean with quotes it will make them a string.
+      2. 
+
+
+
+
+If statements
+    
+    Lets us write multiple groups of code and decide which code to run eg 
+            if(true){
+                    conole.log{'Stay Back'}
+
+            }
+ RULES FOR if STATEMENTS:
+    1. 
+
+   # DoneTruthyandFalsy
+  Truthy and falsy Values:
+    if(5){
+        console.log('truthy') -result will be truth because 5 is a truthy value.
+    } 
+    All values that are not on falsy list are truthy
+
+
+
+
+    if(0){
+        console.log('falsy') -result will be false because 5 is a falsy value.
+    }
+    eg of falsy values 0, '', false, NaN(Not a number eg 'ali' + 5 output NaN), Undefined(Something doesnt have a value
+     eg let variable1; console.log(variable1); output undefined. You cant use it with const)  and null().
+
+
+
+Shortcuts for if statements:
+      ?(Ternary Operator) - eg true ? 'truthy' : 'falsy'- its like a result for if statement.  the result after the question mark and before the colon is tue and after the colon is false.
+                Example: if(true){
+                    console.log('truthy)
+                }
+                else if{
+                    console.log('falsy')
+                }
+
+                Advantage
+                    We can save it in  a variable eg const result = true ? 'truthy' : 'falsy'
+
+
+        
+        &&(guard operator) -eg false && console.log('Ali')- When the code runs it wont execute the second line because
+                                                            the first value is false
+                                Shortcut for:
+                                            if(condition){
+                                                console.log('Ali')
+                                            }
+                            eg2.  true && console.log('Ali') - When the code runs it will execute the second line because
+                                                             the first value is True otput - Ali.
+
+
+
+                                We can save it in a variable just like Ternary operator.
+
+        ||(Default Operator) - 
+
+
+
+End Booleans and If statements//
+
+
+
+//Comparison Operators
+
+    > -greater Than
+    < -Less Than
+    >= -greater Than or Equal to.
+    <= -Less than or equal to.
+    === - equal to
+    !== - Not Equal to
+
+    NB:
+      1.  == - javascript can Use this operator for comparison although if the values are same but different datatypes
+             it will convert the datatype to match eg 5 == '5' - It will be a true because the operator converted the string to a number
+       
+       2. Comparison operators have lower value compared to math eg 3 > 5-5 It will be true, because it first calculated
+            5-5 which is 0 and then compare it if it is less than 3.
+
+
+
+End Comparison Operators//
+
+//Logical operators
+
+    1.&&(and operator)- check if two values are both true eg. (true && true) - we get true
+                                                            (true && false) - we get false
+
+    2. ||(or) - used to check if atleast one side is true eg (true || false) -you get true
+                                                          (true || true) - you get a true
+
+    3. !(not)- only uses one boolean value and flips it into opposite value eg !true - flips it to false
+                                                                                !false - flips it to true
+                                                          
+
+End logical Operators//
+
+//scope
+
+  scope- Help avoid naming conflicts
+            limites where a variable exists eg. 
+                                        const randomNumber = Math.random();
+                                        if (randomNumber >=0 && randomNumber<=1 /3 ){
+                                            const computerMove = 'Rock'
+                                        }
+                                        
+                                        else if(randomNumber>=1/3 && randomNumber< 2/3)
+                                        {
+                                            const computerMove = 'Paper'
+                                            }
+
+                                        else if(randomNumber>=2/3 && randomNumber < 1){
+                                            const computerMove = 'Scissors'
+                                        }">Rock</button>
+                                        console.log(computerMove)
+                                    
+                                the code will get an error because any variable created inside a calibracket will only exist inside the calibracket if used outside the brackets it will give an error. Like for the above code the variable has been used outside the calibrackets.
+                                
+                                tO access the variable we have to use it outside the if statement 
+                                EG:
+                                    const randomNumber = Math.random();
+                                    const computerMove = '';
+                                    if (randomNumber >=0 && randomNumber<=1 /3 ){
+                                        computerMove = 'Rock'
+                                    }
+                                    
+                                    else if(randomNumber>=1/3 && randomNumber< 2/3)
+                                    {
+                                        computerMove = 'Paper'
+                                        }
+
+                                    else if(randomNumber>=2/3 && randomNumber < 1){
+                                        computerMove = 'Scissors'
+                                    }">Rock</button> 
+
+
+
+End Scope//
+
+
+
+//Functions
+
+A functions lets us reuse code
+        eg function function1(){
+            console.log('Morning')
+            console.log('Hello')
+        }
+
+        function1(); - I used to execute the function that has been written above.
+
+        -function1 is the name of the function. 
+    
+    Syntax Rules:
+
+            Same as variable syntax.
+
+
+    Function also uses scope method - Variable inside it cant be accessed anywhere else in the code.
+
+    
+    Return statement in functions:
+        
+        lets us get a value out a function.
+        Written at the end of a function.
+
+        when we use a return statement it ends the function immediately
+
+        it can also be used to access a value inside the scope. eg.
+                                                                    function pickComputerMove(){
+
+                                                                    const randomNumber = Math.random();
+                                                                    let computerMove = '';
+                                                                            
+                                                                    if (randomNumber >=0 && randomNumber<=1 /3 ){
+                                                                    computerMove = 'Rock'
+                                                                    }
+                                                                                                            
+                                                                    else if(randomNumber>=1/3 && randomNumber< 2/3)
+                                                                    {
+                                                                        computerMove = 'Paper'
+                                                                    }
+
+                                                                    else if(randomNumber>=2/3 && randomNumber < 1){
+                                                                        computerMove = 'Scissors'
+                                                                    }
+
+                                                                    return computerMove;
+                                                                    }although it will still give an error. so to prevent the error we create another variable with the same name as computerMove  but using a different special variable asssignment technique and use the function name eg const computerMove = pickComputerMove().
+
+
+    Prameters - opposite of a return statement. It puts a value into a  function. eg
+                    function calculateTax(parameter1){
+                        console.log(parameter1 *0.1)
+                    }
+
+                    calculateTax(1000)- 1000 or any number inside the bracket is the parameter
+                A parameter can take in two values.eg:
+                                                       function calculateTax(cost, taxPercent){
+                                                                 console.log(cost * taxPercent)
+                                                                 }
+
+                                                                calculateTax(1000, 0.2); - The two arguments a function is supposed to take in.  
+                To set a default value for a parameter we use   function calculateTax(cost, taxPercent = 0.1 ){
+                                                                 console.log(cost * taxPercent)
+                                                                 }
+
+                                                                calculateTax(1000, 0.2); - The two arguments a function is supposed to take in. 
+
+
+                                                                
+
+             Syntax Rules:
+                    -To create a parameter Type the parameter name between the function brackets.
+                    -Parameter names follow same rules as variable names:
+                                                                        -No special words.
+                                                                        -No startig with a number.
+                                                                        - cant use special characters except: $ _
+
+                    
+
+
+
+
+
+
+//End Functions
+
+//objects
+
+An object groups multiple values togther eg:
+                                            const product = {
+                                                name:'Ali',
+                                                price: 1090
+
+                                            }
+                                            to get a particular thing in the object you can do.
+                                                    console.log(product.name)- it gives name inside the object
+                                            
+                                            -We can use bracket notation to get a value inside an object eg:
+                                                                                            console.log(product['name']):
+                                                                                            this gives the value inside name property. Ans = Ali
+                                                -Bracket notation is used when you cant use Dot(.) notation eg:
+                                                                                                console.log(product.name-age)- You will get an error because Javascript thnks you are trying to minus age from name.
+                                                                                                But if you use console.log(product['name-age']). it gives you the value inside the property.
+                                                - We can also use bracket notation as property inside an object eg:
+                                                        const product = {
+                                                            ['Delivery-time']: '2 hours'
+                                                        }
+
+                                        -we can also use a string to name a property eg:
+                                                                'delivery-time': '2 hours'
+
+                                            -You can change a value inside the product eg:
+                                                                                    product.name = 'Wangara'
+                                                                                    the name changes from Ali to Wangara
+                                            
+                            -Syntax Rules:
+                                        to create an object we start with an open and end with{} eg: const cars = {
+                                                                                                name: 'Toyota',
+                                        }
+                                        code on left is called property and is separated by a colon eg:
+                                                                                                    name-(property):-(colon) 
+
+                                        To add new property we do product.newproperty = true;
+
+                                        To delete property we do delete product.newProperty;
+
+                                        -We can save it inside a variable.
+
+
+        Built in Objects:
+            eg 1: Json- Javascriot object notation. All properties on Json must use double quotes "", Json doesnt support
+                        functions. Json is more universal because it can be understood by other languages.
+
+                        To convert a javascript object to a json we use  JSON.stringify(name of object) eg:
+                                        JSON.stringify(product)
+
+                        To convert JSON to object we use JSON.parse eg:
+                                JSON.parse(JSON.stringify(product))
+
+
+                2: LocalStorage - Only supportts strings. It has three methods:
+                                        setItem - set value of item stored eg:
+                                                            localStorage.setItem('score', JSON.stringify(score))
+
+                                        getItem - get the value of the item eg:
+                                                        JSON.parse(localStorage.getItem('score'));
+
+                                        removeItem - removes item value eg:
+                                                        localStorage.removeItem('score')
+        More objects:
+            null and undefined - null is set by the user if they want something to be empty. undefined is used as a         default value.
+            
+            Auto-Boxing- 
+                    eg: 'hello'.length- tells us how many characters are in a string
+                               .toUpperCase()- capitalize all letters
+
+        Destructuring- Easier way to take properties out of an object eg:
+                        const object2 = {
+                            message: 'Hello'
+                        }
+
+                        instead of doing:  const message = object2.message, we can do:
+                          const {message}  = object2; - A shortcut
+
+
+
+
+
+
+//End objects
+
+
+//Arrays
+
+    
+
+
+
+
