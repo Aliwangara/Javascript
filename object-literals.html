@@ -1,0 +1,146 @@
+<!--  -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    
+
+    <script>
+
+    //Basically means key value pairs
+    //You can put an object inside an object exapmple is where address is
+        const person = {
+            firstName: 'John',
+            lastName: 'Doe',
+            age:30,
+            hobbies:['music', 'movies', 'sports'],
+            address:{
+                street:'50 main st',
+                city:'Boston',
+                state:'MA',
+            }
+        }
+        console.log(person.firstName)//to get firs name of the person in the object
+        console.log(person.hobbies[1])//gives us movies because it is 1 in the array
+        //Or we can use the new feature to access an object so that instead of using the name of the object and .value we use
+
+        const {firstName, lastName, address:{street}} = person;
+        console.log(street)
+
+        //To add a value into an object we use
+        person.email = 'Ali@gmail.com'
+        console.log(person)
+
+    /*
+   
+   Most times we will be dealing with arrays of objects and for that we use :
+   */
+
+   const todos = [
+    {
+        id: 1,
+        text: 'take out trush',
+        isCompleted: true
+
+
+    },
+
+    {
+        id: 2,
+        text: 'Eat',
+        isCompleted: true
+
+
+    },
+
+    {
+        id:3,
+        text: 'Appointment',
+        isCompleted: false
+
+
+    },
+
+
+
+   ];
+
+   console.log(todos[1].text)
+
+   //Json
+   //Note: We use Json formatter online
+
+   const todoJson = JSON.stringify(todos)
+   console.log(todoJson)
+
+   //for loop
+
+//    for(let i=0; i<10; i++){
+//     console.log(`for loop number ${i}`);
+
+//    }
+
+
+   //while loop - we set variable outside the loop
+     
+
+    // let i=0;
+    // while(i<10){
+    //     console.log(`while loop number ${i}`);
+    //     i++;
+
+    // }
+
+
+
+
+//looping through arrays
+
+    // for(let i =0; i<todos.length; i++){
+    //     console.log(todo[1].text)
+    // }
+
+//or
+
+for(let todo of todos){
+    console.log(todo)
+}
+// or high order 1. forEach, map, filter
+
+// todos/*name of the array*/.forEach(function(todo/*new assigned variable*/){
+//     console.log(todo.text)
+
+
+// })
+
+
+//for Each
+ todos.forEach(function(todo){
+    console.log(todo.text)
+ })
+
+//map
+const todoText = todos.map(function(todo){
+    return todo.text
+})
+console.log(todoText)//this returns an array
+
+
+//filter
+
+const todoCompleted = todos.filter(function(todo){
+    return todo.isCompleted === true;
+})
+console.log(todoCompleted)//takes values in the object that have completed 
+
+    
+
+
+
+    </script>
+  </body>
+  </html>
