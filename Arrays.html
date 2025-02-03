@@ -1,0 +1,35 @@
+<!-- Variables that hold multiple values -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        //if you see new before something know that the new is constructing the next thing 
+        const numbers = new Array(1,2,3,4,5);// Here tje new is constructing an array
+        console.log(numbers)
+        //Or we can use 
+
+          const fruits = ['Apples', 'Oranges', 10, true]// In javascript you can have different data typees in your array 
+          fruits[3] = 'grapes';
+          fruits.push('mangoes') //adds mango to the end
+          fruits.unshift('strawberry')// adds strawberry as the first word in the array before apples
+          fruits.pop();// removes last value in the array
+          console.log(fruits[1])// we get oranges because array starts at 0 so 0 is apple
+          console.log(Array.isArray(fruits))//checks if a value or datatype is an array
+          console.log(fruits.indexOf('Oranges'))
+          console.log(fruits)// =['Apples', 'Oranges', 10, 'grapes']
+        
+
+
+
+    </script>
+</body>
+</html>
